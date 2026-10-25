@@ -1,0 +1,39 @@
+name: 技术咨询 / Request a quote
+description: 说明需求，联系确认技术交付范围与报价。
+title: "[技术咨询] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢关注。价格联系报价，完整资料在确认范围与付款后私有交付。
+        **这里是公开 Issue。请勿填写私密联系方式、客户资料、设备密钥或付款信息。**
+        如有保密需求，只需说明“需要私密沟通”，后续再确认渠道。
+  - type: dropdown
+    id: purpose
+    attributes:
+      label: 主要用途
+      options:
+        - 学习与原理评估
+        - 研发验证或二次开发
+        - 商业项目适配
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 希望获得的内容
+      description: 例如核心源码、工程构建说明、标定方法、主机工具或技术支持。
+    validations:
+      required: true
+  - type: textarea
+    id: platform
+    attributes:
+      label: 现有平台与目标条件
+      description: 只写可公开的信息；可说明 MCU、是否已有探头、计划温区或希望的时间安排。
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: 已了解预览范围
+      options:
+        - label: 我已阅读交付说明，知道技术总览不构成性能保证，具体范围和使用权限需单独确认。
+          required: true
